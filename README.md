@@ -49,7 +49,7 @@ Because this project uses the `fetch` API for modular loading, it requires a loc
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/hessens/hebrew-blind-typing.git](https://github.com/hessens/hebrew-blind-typing.git)
+    git clone https://github.com/hessens/hebrew-blind-typing.git
     ```
 2.  **Run with Live Server:**
     * Open the project folder in **VS Code**.
