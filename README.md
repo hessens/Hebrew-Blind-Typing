@@ -12,7 +12,7 @@
 ---
 
 ## 📖 About the Project
-
+ 
 This application was built to solve the challenge of learning the Hebrew keyboard layout efficiently. Unlike standard typing tests, this tool offers a structured curriculum that builds muscle memory key-by-key. It features a custom-built typing engine that handles real-time validation, multi-user progress tracking via LocalStorage, and a dynamic visual keyboard that reacts to user input.
 
 ## ✨ Key Features
