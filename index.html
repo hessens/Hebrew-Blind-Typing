@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>הקלדה עיוורת- שיעורים</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/left-sidebar.css">
+    <link rel="stylesheet" href="styles/top-icons.css">
+    <link rel="stylesheet" href="styles/lessons.css">
+    <link rel="stylesheet" href="styles/keyboard.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <p class="topic-lessons">:שיעורי הקלדה </p>
+      </div>
+      <div class="middle-section">
+        <div class="js-lang-pop"></div>
+        <button class="language js-pop-language-Window" onclick="renderWindow()">
+          <svg class="language-icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></svg>
+        </button>
+      </div>
+      <div class="right-section">
+        <button class="exit">
+          <svg class="exit-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="sidebar-placeholder"></div>
+
+    <div class="lessons-grid">
+      <div class="first-row">
+        <div class="lesson-level">
+          <div class="topics">:שיעורים</div>
+        </div>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info"> כ, ח, ו</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle1', '.js-toggle2', '.js-toggle3', '.js-toggle4'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle4" onclick="toggleButton('.js-toggle4'); loadContent('levels/lesson1/lesson1-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle3" onclick="toggleButton('.js-toggle3'); loadContent('levels/lesson1/lesson1-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle2" onclick="toggleButton('.js-toggle2'); loadContent('levels/lesson1/lesson1-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle1" onclick="toggleButton('.js-toggle1'); loadContent('levels/lesson1/lesson1-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info">ג, ק, ל, ן</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle11', '.js-toggle12', '.js-toggle13', '.js-toggle14'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle14" onclick="toggleButton('.js-toggle14'); loadContent('levels/lesson2/lesson2-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle13" onclick="toggleButton('.js-toggle13'); loadContent('levels/lesson2/lesson2-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle12" onclick="toggleButton('.js-toggle12'); loadContent('levels/lesson2/lesson2-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle11" onclick="toggleButton('.js-toggle11'); loadContent('levels/lesson2/lesson2-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info"> ד, ך,ם</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle21', '.js-toggle22', '.js-toggle23', '.js-toggle24'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle24" onclick="toggleButton('.js-toggle24'); loadContent('levels/lesson3/lesson3-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle23" onclick="toggleButton('.js-toggle23'); loadContent('levels/lesson3/lesson3-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle22" onclick="toggleButton('.js-toggle22'); loadContent('levels/lesson3/lesson3-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle21" onclick="toggleButton('.js-toggle21'); loadContent('levels/lesson3/lesson3-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info">סיכום ראשון</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle01'])">restart <svg class="restart-button"
+                                                                                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <button class="level-steps-summery-button js-toggle01" onclick="toggleButton('.js-toggle01');
+          loadContent('levels/summery/summery1.html', 'level-content-container');">1</button>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info"> ע, א, י, ט</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle31', '.js-toggle32', '.js-toggle33', '.js-toggle34'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle34" onclick="toggleButton('.js-toggle34'); loadContent('levels/lesson4/lesson4-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle33" onclick="toggleButton('.js-toggle33'); loadContent('levels/lesson4/lesson4-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle32" onclick="toggleButton('.js-toggle32'); loadContent('levels/lesson4/lesson4-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle31" onclick="toggleButton('.js-toggle31'); loadContent('levels/lesson4/lesson4-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info"> ש, פ</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle41', '.js-toggle42', '.js-toggle43', '.js-toggle44'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle44" onclick="toggleButton('.js-toggle44'); loadContent('levels/lesson5/lesson5-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle43" onclick="toggleButton('.js-toggle43'); loadContent('levels/lesson5/lesson5-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle42" onclick="toggleButton('.js-toggle42'); loadContent('levels/lesson5/lesson5-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle41" onclick="toggleButton('.js-toggle41'); loadContent('levels/lesson5/lesson5-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info">סיכום שני</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle02'])">restart <svg class="restart-button"
+                                                                                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <button class="level-steps-summery-button js-toggle02" onclick="toggleButton('.js-toggle02');
+          loadContent('levels/summery/summery2.html', 'level-content-container');">2</button>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info"> ר, נ, מ</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle51', '.js-toggle52', '.js-toggle53', '.js-toggle54'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle54" onclick="toggleButton('.js-toggle54'); loadContent('levels/lesson6/lesson6-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle53" onclick="toggleButton('.js-toggle53'); loadContent('levels/lesson6/lesson6-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle52" onclick="toggleButton('.js-toggle52'); loadContent('levels/lesson6/lesson6-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle51" onclick="toggleButton('.js-toggle51'); loadContent('levels/lesson6/lesson6-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info"> ס, ז</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle61', '.js-toggle62', '.js-toggle63', '.js-toggle64'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle64" onclick="toggleButton('.js-toggle64'); loadContent('levels/lesson7/lesson7-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle63" onclick="toggleButton('.js-toggle63'); loadContent('levels/lesson7/lesson7-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle62" onclick="toggleButton('.js-toggle62'); loadContent('levels/lesson7/lesson7-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle61" onclick="toggleButton('.js-toggle61'); loadContent('levels/lesson7/lesson7-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info"> ץ, ת</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle71', '.js-toggle72', '.js-toggle73', '.js-toggle74'])">restart <svg class="restart-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <div class="level-steps">
+          <button class="level-steps-button js-toggle74" onclick="toggleButton('.js-toggle74'); loadContent('levels/lesson8/lesson8-level4.html', 'level-content-container');">4</button>
+          <button class="level-steps-button js-toggle73" onclick="toggleButton('.js-toggle73'); loadContent('levels/lesson8/lesson8-level3.html', 'level-content-container');">3</button>
+          <button class="level-steps-button js-toggle72" onclick="toggleButton('.js-toggle72'); loadContent('levels/lesson8/lesson8-level2.html', 'level-content-container');">2</button>
+          <button class="level-steps-button js-toggle71" onclick="toggleButton('.js-toggle71'); loadContent('levels/lesson8/lesson8-level1.html', 'level-content-container');">1</button>
+        </div>
+      </div>
+      <div class="lessons">
+        <div class="level-top">
+          <div class="level-info">סיכום אחרון</div>
+          <button class="restart" onclick="resetLevel(['.js-toggle03'])">restart <svg class="restart-button"
+                                                                                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></button>
+        </div>
+        <button class="level-steps-summery-button js-toggle03" onclick="toggleButton('.js-toggle03');
+          loadContent('levels/summery/summery3.html', 'level-content-container');">3</button>
+      </div>
+    </div>
+
+
+
+    <div id="level-content-container"></div>
+
+    <script src="scripts/icons.js"></script>
+    <script src="scripts/toggle.js"></script>
+    <script src="scripts/language.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
