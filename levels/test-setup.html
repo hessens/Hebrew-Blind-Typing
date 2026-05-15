@@ -1,0 +1,32 @@
+<div class="test-container">
+    <h2>מבחן הקלדה</h2>
+
+    <div class="mode-tabs">
+        <button id="tab-words" class="mode-btn active" onclick="setTestMode('words')">מספר מילים</button>
+        <button id="tab-time" class="mode-btn" onclick="setTestMode('time')">מוגבל בזמן</button>
+    </div>
+
+    <div id="words-options" class="options-panel">
+        <p>:בחר כמות מילים</p>
+        <input type="number" id="word-count" value="20" min="10" max="100">
+    </div>
+
+    <div id="time-options" class="options-panel" style="display: none;">
+        <p>:בחר זמן</p>
+        <div class="time-grid">
+            <button class="time-btn" onclick="selectTime(15, this)">15s</button>
+            <button class="time-btn" onclick="selectTime(30, this)">30s</button>
+            <button class="time-btn" onclick="selectTime(45, this)">45s</button>
+            <button class="time-btn selected" onclick="selectTime(60, this)">1m</button>
+            <button class="time-btn" onclick="selectTime(90, this)">1.5m</button>
+            <button class="time-btn" onclick="selectTime(120, this)">2m</button>
+        </div>
+    </div>
+
+    <button onclick="generateTest()" class="start-test-btn">התחל מבחן</button>
+</div>
+
+<div id="timer-display" style="display:none; color: #4caf50; font-size: 24px; text-align: center; margin-top: 10px;"></div>
+
+<div id="target-text" dir="rtl"></div>
+<div id="keyboard-show-placeholder"></div>
