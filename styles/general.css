@@ -1,0 +1,22 @@
+
+body{
+  font-family: Noto+Sans+Mono, Arial;
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  background-color: rgb(34,39,46)
+}
+
+
+/* scroolbar */
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(34,39,46);
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(72, 149, 239);
+  border-radius: 4px;
+}

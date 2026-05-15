@@ -1,0 +1,82 @@
+body{
+  font-family: Noto+Sans+Mono, Arial;
+  background-color: rgb(34,39,46)
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(34,39,46);
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(72, 149, 239);
+  border-radius: 4px;
+}
+.top-page{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.topic{
+  justify-self: center;
+  color: rgb(109, 120, 135);
+  font-size: 30px;
+}
+.topic-buttons{
+  align-items: center;
+  padding-top: 10px;
+  justify-self: center;
+}
+.lessonTopic-button,
+.testTopic-button {
+  background-color: transparent;
+  color: rgb(109, 120, 135);
+  border: none;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.lessonTopic-button:hover,
+.testTopic-button:hover {
+  color: rgb(149, 157, 167);
+}
+.front-info{
+  display: grid;
+  grid-template-rows: 250px 80px 250px;
+}
+.topic-info{
+  justify-self: center;
+  margin-top: 100px;
+  font-size: 50px;
+}
+.first-row{
+  color: white;
+}
+.second-row{
+  color: rgb(72, 149, 239);
+}
+.center-info{
+  color: rgb(109, 120, 135);
+  font-size: 22px;
+  justify-self: center;
+}
+.button-choose{
+  justify-self: center;
+}
+.lesson-button,
+.test-button{
+  height: 50px;
+  width: 180px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(34, 39, 46);
+  font-size: 20px;
+  margin-top: 0;
+}
+.lesson-button{
+  background-color: rgb(203, 208, 223);
+  margin-left: 5px;
+}
+.test-button{
+  background-color: rgb(72, 149, 239);
+}
+

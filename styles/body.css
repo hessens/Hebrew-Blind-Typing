@@ -1,0 +1,167 @@
+
+.lessons-grid{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 40px;
+  margin: 100px 100px 100px 100px;
+  z-index: 100;
+  margin-left: 250px;
+  margin-right: 300px;
+  margin-top: 0;
+}
+.lessons{
+  background-color: rgb(39, 46, 53);
+  height: 70px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 1fr 1fr
+}
+.level-top{
+  display: grid;
+  grid-template-columns: 1fr 130px;
+}
+.level-info{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin-left: 40px;
+}
+.level-steps{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 8px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.level-steps-button{
+  background-color: rgb(239, 108, 117);
+  border-radius: 5px;
+  border-width: none;
+  border: solid;
+  border: none;
+  height: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.2s;
+  color: white;
+  padding-bottom: 5px;
+  font-size: 9px;
+}
+.level-steps-button:hover{
+  background-color: rgb(72, 149, 239);
+  height: 15px;
+  transition: 0.2s;
+  font-size: 12px;
+}
+.first-row{
+  row-gap: 30px;
+  background-color: rgb(34,39,46);
+  color: rgb(255, 255, 255);
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 0px;
+ 
+}
+
+.topics{
+  color: rgb(109, 120, 135);
+  font-size: 25px;
+  margin-left: 100%;
+  margin-bottom: 10px;
+ 
+}
+.level-buttons{
+  background-color: rgb(39, 46, 53);
+  border-radius: 5px;
+  border-width: none;
+  border: solid;
+  border-color: rgb(39, 46, 53);;
+  color: white;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.level-buttons:hover{
+  background-color: rgb(72, 149, 239);
+}
+.levels{
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+}
+.restart{
+  background-color: rgb(34,39,46);
+  color: gray;
+  font-size: 17px;
+  border: none;
+  border: solid;
+  border-color:rgb(34,39,46) ;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-right: 6px;
+  border-radius: 5px;
+  
+}
+.restart-button{
+  height: 20px;
+  background-color: rgb(34,39,46);
+  fill: gray;
+  padding-left: 6px;
+}
+.restart:hover{
+  width: 135px;
+}
+.is-toggled {
+  background-color: rgb(72, 149, 239);
+  height: 15px;
+  font-size: 12px;
+}
+
+
+#target-text {
+  text-align: center;
+  direction: rtl;
+
+
+  font-size: 40px;
+  font-family: 'Noto Sans Mono', monospace;
+  font-weight: bold;
+  letter-spacing: 5px;
+
+  line-height: 70px;
+  height: 280px;
+  overflow: hidden;
+  display: block;
+
+
+  width: 90%;
+  margin: 50px auto;
+  position: relative;
+
+
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  padding: 0 20px;
+}
+.level-steps-summery-button{
+  background-color: rgb(239, 108, 117);
+  border-radius: 5px;
+  border-width: none;
+  border: solid;
+  border: none;
+  height: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.2s;
+  color: white;
+  padding-bottom: 5px;
+  font-size: 9px;
+}
+.level-steps-summery-button:hover{
+  background-color: rgb(72, 149, 239);
+  height: 15px;
+  transition: 0.2s;
+  font-size: 12px;
+}

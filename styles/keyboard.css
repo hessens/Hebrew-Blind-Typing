@@ -1,0 +1,58 @@
+/* --- KEYBOARD CONTAINER --- */
+.keyboard-grid {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr); /* 4 Equal rows */
+  gap: 8px; /* Consistent gap between rows */
+
+  /* Centering and positioning */
+  margin: 40px auto; /* Centers the keyboard horizontally */
+  max-width: 800px;  /* Prevents it from getting too wide */
+  padding: 20px;
+  background-color: #161b22; /* Optional: Dark background for the keyboard base */
+  border-radius: 10px;       /* Rounded corners for the keyboard base */
+  direction: ltr; /* Keyboards are usually LTR even in Hebrew sites */
+}
+
+.keyboard-first-row,
+.keyboard-second-row,
+.keyboard-third-row,
+.keyboard-forth-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+
+.keyboard-letter {
+  background-color: rgb(39, 46, 53);
+  color: white;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 0 4px 0 rgb(20, 25, 30); /* This creates the "3D key" effect */
+
+  /* Sizing - Square keys look more realistic */
+  width: 50px;
+  height: 50px;
+
+  /* Text Alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: 'Noto Sans Mono', monospace;
+  font-weight: bold;
+}
+
+
+.keyboard-forth-row .keyboard-letter {
+  width: 300px; /* Spacebar needs to be wide */
+}
+
+/* Active State - For both mouse click (:active) and keyboard press (.active-key) */
+.keyboard-letter:active,
+.keyboard-letter.active-key {
+  transform: translateY(4px);       /* Moves key down */
+  box-shadow: 0 0 0 rgb(20, 25, 30); /* Removes shadow depth */
+  background-color: rgb(72, 149, 239); /* Highlight Blue */
+  transition: none; /* Instant change when pressed */
+}
